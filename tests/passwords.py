@@ -1,3 +1,0 @@
-user = "Admin"
-
-password = "admin"
