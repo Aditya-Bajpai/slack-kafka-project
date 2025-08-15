@@ -31,13 +31,15 @@ run_test("Test 2: createTopic", {
     "intent": "createTopic",
     "params": {
         "nodeName": "REMOTE_KAFKA",
+        "clusterName": "cluster.5",
+        "topicName": "cluster.4.TOPIC.651",
         "body": {
-            "topicName": "cluster.4.TEST.TOPIC.900",
-            "partitions": 1,
+            "partitions": 3,
             "replicationFactor": 1
         }
     }
 })
+
 
 # 3. Read Topic Data
 run_test("Test 3: readTopicData", {
@@ -45,9 +47,10 @@ run_test("Test 3: readTopicData", {
     "params": {
         "nodeName": "REMOTE_KAFKA",
         "clusterName": "cluster.5",
-        "topicName": "cluster.4.TOPIC.700"
+        "topicName": "cluster.4.TOPIC.670"
     }
 })
+
 
 # 4. Read Partition Data
 run_test("Test 4: readPartitionData", {
@@ -55,9 +58,10 @@ run_test("Test 4: readPartitionData", {
     "params": {
         "nodeName": "REMOTE_KAFKA",
         "clusterName": "cluster.5",
-        "partitionName": "cluster.4.TOPIC.700"
+        "partitionName": "cluster.4.TOPIC.670-0"
     }
 })
+
 
 # 5. Delete Topic
 run_test("Test 5: deleteTopic", {
@@ -65,6 +69,6 @@ run_test("Test 5: deleteTopic", {
     "params": {
         "nodeName": "REMOTE_KAFKA",
         "clusterName": "cluster.5",
-        "topicName": "cluster.4.TEST.TOPIC.900"
+        "topicName": "cluster.4.TOPIC.670"
     }
 })
