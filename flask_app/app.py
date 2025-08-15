@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from .kafka_client  import get_broker_data, create_topic, read_topic_data, read_partition_data, delete_topic
+from kafka_client  import get_broker_data, create_topic, read_topic_data, read_partition_data, delete_topic
 
 app = Flask(__name__)
 
